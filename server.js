@@ -19,14 +19,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false})); 
 
 app.use(express.static(__dirname));
-// app.use('api',api);
 app.use((req, res) => res.sendFile(`${__dirname}/index.html`));
 
-// app.use((err, request, response, next) => {  
-//   // log the error, for now just console.log
-//   console.log(err)
-//   response.status(500).send('Something broke!')
-// });
+if(app.get('env') == 'development'){
+    app.use((err, request, response, next) => {  
+    console.log(err)
+    response.status(500).send('Error!')
+    });
+}
 
 app.listen(port, function(){
     console.log('sever on ' + uri);

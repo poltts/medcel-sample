@@ -1,5 +1,5 @@
 {
-  "name": "sample-project",
+  "name": "medcel-sample",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -34,9 +34,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:poltts/front-test-3.git"
+    "url": "https://github.com/poltts/medcel-sample"
   },
-  "homepage": "https://polar-reef-28726.herokuapp.com/",
+  "homepage": "https://stormy-fortress-27630.herokuapp.com/#/",
   "author": "Poltts <patriciapoltts@gmail.com>",
   "license": "ISC"
 }
