@@ -74,11 +74,11 @@
 			img: 'dist/img/05.png'
 		}
 	 ];
-	 $scope.videoComplete = '20,1%';
+	 $scope.videoMeta = '20,1%';
 
 	 $scope.videos = {
 		 data: $scope.videoData,
-		 progress: $scope.videoComplete
+		 meta: $scope.videoMeta
 	 }
 
 }]);  
