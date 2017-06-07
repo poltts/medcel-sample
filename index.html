@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp"> 
+<head>
+    <base href="./">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blank Project</title> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="node_modules/bootstrap-grid/dist/grid.min.css" rel="stylesheet"  /> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  />
+    <link href="dist/css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header ng-controller="homeController">
+        <div class="content row">
+            <div class="col-xs-3 col-md-2">
+                <nav-menu data="navMenu"></nav-menu>
+                <figure>
+                    <img src="dist/img/logo.png" alt="logo" />
+                </figure>
+            </div> 
+            <div class="col-md-7">
+                <search info=""></search>
+            </div>
+            <div class="col-xs-1 col-md-1">
+                <notify info="notifyData"></notify>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <user-profile info="userData"></user-profile>
+            </div>
+        </div>
+    </header>
+    <div class="container">  
+        <main>
+            <div ng-view></div> 
+        </main>
+    </div> 
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>  
+    <script src="dist/js/global.js"></script>
+</body>
+</html>

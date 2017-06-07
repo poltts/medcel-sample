@@ -1,0 +1,124 @@
+@import (reference) 'vars.less';
+
+/* Layout defaults */
+.clean{
+    margin: 0px;
+    padding: 0px;
+}
+.size(@w,@h){
+    width: @w;
+    height: @h;
+}
+.size-min(@w,@h){
+    min-width: @w;
+    min-height: @h;
+}
+.size-max(@w,@h){
+    max-width: @w;
+    max-height: @h;
+}
+.overflow(@flow){ overflow: @flow; }
+.pointer{ cursor: pointer; }
+/* Alginments and Text */
+.a-center{ text-align: center; }
+.a-left{ text-align: left; }
+.a-right{ text-align: right; }
+.a-justify{ text-align: justify; }
+
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+.capitalize{ text-transform: capitalize; }
+
+.font-default{ 
+    font-family: @font-name-default; 
+    font-weight: 400;
+}
+.font-light{ 
+    font-family: @font-name-default; 
+    font-weight: 300; 
+}  
+.bold{ font-weight: bold; }
+
+.color-white{ color: rgb(255,255,255); }
+
+.letter-spc(@size){ letter-spacing: @size; }
+
+/* Borders  */
+.border(@size,@type,@color){ border: @size @type @color; }
+
+.border-bottom(@size,@type,@color){ border-bottom: @size @type @color; }
+.border-round(@size){ 
+    border-radius: @size; 
+        -webkit-border-radius: @size;
+        -moz-border-radius: @size;
+ }
+
+/* Effects  */
+.box-shadow1{
+    box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4);
+         -moz-box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4);
+         -webkit-box-shadow: 3px 3px 10px -1px rgba(0,0,0,.4); 
+}
+/* Animations  */
+.transition(@property, @delay, @animation){
+    transition: @property @delay @animation; 
+        -webkit-transition: @property @delay @animation;
+        -moz-transition: @property @delay @animation;
+        -o-transition: @property @delay @animation;
+    }
+
+/* Components */
+.table{
+    .content{
+        display: table;
+        width: 100%;
+    }
+    .row {
+         display: table-row; 
+
+         &:first-child{
+            background: rgb(204,204,204) !important;
+                .cell{
+                    color: rgb(255,255,255);
+                    .uppercase; 
+                }
+         }
+          &:nth-child(even){
+            background: rgb(255,255,255);
+          }
+          &:nth-child(odd){
+             background: rgb(238,238,238); 
+          }
+     } 
+    .cell { 
+        display: table-cell;
+        padding: 1% 0px;
+        color: rgb(133,133,133);
+            .bold;
+            .lowercase;
+            .border(1px, solid, rgb(133,133,133));
+
+            @media (max-width: 500px){  
+               padding: 4%;
+
+            }
+
+    }
+    .header { 
+        display: table-header-group;  
+    }
+    .footer {
+        background: rgb(133,133,133);
+        display: table-footer-group;
+        font-weight: bold;
+    }
+    .body { display: table-row-group;  }
+}
+
+.select-default{
+    background: rgb(255,255,255) url('../../../dist/img/icon-arrow-down.png') center right no-repeat;
+    background-size: 15% 100%;
+    background-position: 98%;
+    margin: 1% auto;
+
+}

@@ -1,0 +1,42 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "devDependencies": {
+    "dotenv": "4.0.0",
+    "grunt": "1.0.1",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-cssmin": "2.2.0",
+    "grunt-contrib-less": "1.4.1",
+    "grunt-contrib-uglify": "3.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "load-grunt-configs": "1.0.0",
+    "load-grunt-tasks": "3.5.2"
+  },
+  "dependencies": {
+    "angular": "1.5.11",
+    "angular-animate": "1.6.4",
+    "angular-route": "1.5.11",
+    "body-parser": "1.17.2",
+    "bootstrap-grid": "2.0.1",
+    "express": "4.15.3",
+    "fs": "0.0.1-security",
+    "helmet": "3.6.1",
+    "morgan": "1.8.2"
+  },
+  "engines": {
+    "node": "6.10.3",
+    "npm": "3.10.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:poltts/front-test-3.git"
+  },
+  "homepage": "https://polar-reef-28726.herokuapp.com/",
+  "author": "Poltts <patriciapoltts@gmail.com>",
+  "license": "ISC"
+}
