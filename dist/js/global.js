@@ -17,17 +17,6 @@ web.config(['$routeProvider','$httpProvider','$locationProvider',
 
  
 /* SLIDE DIRECTIVE   */
-// web.directive('box', function() { 
-//   return { 
-//     restrict: 'E', 
-//     scope: { 
-//       info: '='
-//     }, 
-//     templateUrl: '../../../views/templates/box.html'
-//   }; 
-// });
- 
-/* SLIDE DIRECTIVE   */
 web.directive('navMenu', function() { 
   return { 
     restrict: 'AE',
@@ -61,42 +50,6 @@ web.directive('search', function() {
     templateUrl: '../../../views/templates/search.html'
   }; 
 });
- 
-/* SLIDE DIRECTIVE   */
-// web.directive('slide', function($timeout) { 
-//   return { 
-//     restrict: 'AE',
-//     replace: true,
-//     scope: {
-//       images: '='
-//     },
-//     link: function(scope, elem, attrs) {
-//       var timer;
-//       var sliderFunc = function() {
-//           timer = $timeout(function() {
-//             scope.next();
-//             timer = $timeout(sliderFunc, 5000);
-//           } , 5000);
-//       };
-//       scope.currentIndex = 0;
-//       scope.$watch('currentIndex', function() {
-//       scope.images.forEach(function(image) {
-//         image.visible = false; 
-//       });
-
-
-//       scope.images[scope.currentIndex].visible = true;
-//       sliderFunc();
-
-//       scope.$on('$destroy', function() {
-//         $timeout.cancel(timer);
-//       });
-
-//     });
-//     },
-//     templateUrl: '../../../views/templates/slide.html'
-//   }; 
-// });
  
 /* DIRECTIVE   */
 web.directive('userProfile', function() { 
