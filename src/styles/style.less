@@ -168,7 +168,7 @@ main{
     
     .size(100%,auto);
     .a-center;
-
+    
     .videos{
         position: absolute;
         top: @header-h;
@@ -177,6 +177,9 @@ main{
         margin: 0px;
         padding: 2% 0px;
         .size(100%,auto);
+            .transition(all, 0.5s, ease);
+
+            // .transition(height, .3s, linear);
 
         .videos-info{
             h2{
@@ -314,11 +317,25 @@ main{
                     }
             }
         }
-
-    }
+    }/*#en .videos */
 }
 .green{ color: #43a047;}
 .no-pad{ padding: 0px;}
 
 .left{ float: left; }
 .rigth{ float: right; }
+
+
+        /* up/down animation box */
+        .animate-show { 
+            height: 100%;   
+        }
+
+        .animate-show.ng-hide-add.ng-hide-add-active,
+        .animate-show.ng-hide-remove.ng-hide-remove-active {
+            .transition(all, 0.5s, linear);
+        }
+
+        .animate-show.ng-hide {
+            height: auto;
+        }

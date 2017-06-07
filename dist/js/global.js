@@ -1,4 +1,4 @@
-const web = angular.module('webApp', ['ngRoute']);
+const web = angular.module('webApp', ['ngRoute','ngAnimate']);
 
 /* CONFIG  */
 web.config(['$routeProvider','$httpProvider','$locationProvider',
@@ -80,7 +80,6 @@ web.directive('videos', function() {
                 scope.videosLimit = null;
                 scope.btnTxt = "Ver menos";
                 scope.btnIcon = 'up';
-                console.log(el);
             }else{
                 scope.videosLimit = 5;
                 scope.btnTxt = "Ver mais";

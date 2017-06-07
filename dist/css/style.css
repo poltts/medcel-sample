@@ -176,6 +176,7 @@ main {
   width: 100%;
   height: auto;
   text-align: center;
+  /*#en .videos */
 }
 main .videos {
   position: absolute;
@@ -186,6 +187,10 @@ main .videos {
   padding: 2% 0px;
   width: 100%;
   height: auto;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 main .videos .videos-info h2 {
   font-family: 'Roboto', sans-serif;
@@ -318,4 +323,18 @@ main .videos ul > li > .infos > .icon:last-child {
 }
 .rigth {
   float: right;
+}
+/* up/down animation box */
+.animate-show {
+  height: 100%;
+}
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+.animate-show.ng-hide {
+  height: auto;
 }

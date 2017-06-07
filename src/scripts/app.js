@@ -1,4 +1,4 @@
-const web = angular.module('webApp', ['ngRoute']);
+const web = angular.module('webApp', ['ngRoute','ngAnimate']);
 
 /* CONFIG  */
 web.config(['$routeProvider','$httpProvider','$locationProvider',
