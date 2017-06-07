@@ -172,8 +172,150 @@ header > .content .search .btn span > i {
 /* #end header */
 main {
   padding: 2% 0px;
-  margin: 2% auto;
+  margin: 60px auto 0px auto;
   width: 100%;
   height: auto;
   text-align: center;
+}
+main .videos {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  background: #333;
+  margin: 0px;
+  padding: 2% 0px;
+  width: 100%;
+  height: auto;
+}
+main .videos .videos-info h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  margin-bottom: 2%;
+  font-weight: bold;
+  color: #ffffff;
+}
+main .videos .videos-info > [class*="col-"]:last-child h2 {
+  text-align: right;
+}
+main .videos .more {
+  margin: 0px auto;
+  text-align: center;
+  color: #ffffff;
+}
+main .videos .more > span {
+  cursor: pointer;
+}
+main .videos .icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+main .videos .icon > i {
+  font-size: 15px;
+  color: #ffffff;
+}
+main .videos .icon.question > i {
+  color: #666;
+  font-size: 15px;
+}
+main .videos .icon.gear > i {
+  font-size: 15px;
+}
+main .videos ul {
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+main .videos ul > li {
+  position: relative;
+  float: left;
+  list-style-type: none;
+  width: calc(20%);
+  height: 198px;
+  margin: 0 0 13px 0;
+  cursor: pointer;
+}
+main .videos ul > li > small {
+  font-size: 100%;
+  color: #c5c5c5;
+  padding: 0px;
+  float: left;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  height: auto;
+}
+main .videos ul > li > img {
+  position: absolute;
+  margin: 0px;
+  top: 21px;
+  left: 0px;
+  opacity: .75;
+  width: 90%;
+  height: auto;
+  border: 1px solid #333;
+  box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.4);
+}
+main .videos ul > li > p {
+  font-size: 133.66%;
+  padding: 0px;
+  margin: 0px 0 0 15px;
+  top: 85px;
+  float: left;
+  position: relative;
+  color: #c5c5c5;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: left;
+  width: 76%;
+  height: auto;
+  color: #ffffff;
+  font-weight: bold;
+}
+main .videos ul > li > .infos {
+  display: inline-block;
+  padding: 0px;
+  position: relative;
+  z-index: 6;
+  margin: 98px 0 0 14px;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+main .videos ul > li > .infos > .icon {
+  float: left;
+  width: auto;
+  height: auto;
+  margin: 0 8px 0 0;
+}
+main .videos ul > li > .infos > .icon > i {
+  font-size: 15px;
+  color: #ffffff;
+}
+main .videos ul > li > .infos > .icon.txt {
+  display: inline-block;
+  font-size: 91.67%;
+  margin: 3px 0 0 0;
+  color: #ffffff;
+}
+main .videos ul > li > .infos > .icon:last-child {
+  margin-right: 0px;
+}
+.green {
+  color: #43a047;
+}
+.no-pad {
+  padding: 0px;
+}
+.left {
+  float: left;
+}
+.rigth {
+  float: right;
 }

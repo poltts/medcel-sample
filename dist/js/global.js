@@ -118,10 +118,22 @@ web.directive('videos', function() {
       info: '='
     }, 
     link: function(scope,el,attr){
-        if(scope.open == 0){
-            //closed
-            el.attr.class = '.closed';
+        scope.moreVideos = function(){
+            scope.videosMore = !scope.videosMore; 
         }
+        console.log(scope.videosMore);
+        scope.$watch('videosMore', function(){
+            if(scope.videosMore == true){
+                scope.videosLimit = null;
+                scope.btnTxt = "Ver menos";
+                scope.btnIcon = 'up';
+                console.log(el);
+            }else{
+                scope.videosLimit = 5;
+                scope.btnTxt = "Ver mais";
+                scope.btnIcon = 'down';
+            }
+        });
     },
     templateUrl: '../../../views/templates/videos.html'
   }; 
@@ -166,6 +178,40 @@ web.directive('videos', function() {
 			title: 'Alterações no sistema nervoso  do recém-na...',
 			img: 'dist/img/01.png',
 			rate: 3
+		},
+		{
+			id: 2,
+			type: 'video',
+			time: '37:20',
+			category: 'Climatério',
+			title: 'Hiportemia terapêutica na asfixia neonatal',
+			img: 'dist/img/02.png',
+			rate: 2
+		},
+		{
+			id: 3,
+			type: 'simulado',
+			questions: 30,
+			category: 'Trombofilias',
+			title: 'Simulado sobre trombofilias',
+			img: 'dist/img/03.png',
+			rate: 3
+		},
+		{
+			id: 4,
+			type: 'video',
+			time: '3:15',
+			category: 'Trombofilias',
+			title: 'Adenomegalias febris na adolescência',
+			img: 'dist/img/04.png'
+		},
+		{
+			id: 5,
+			type: 'simulado',
+			questions: 40,
+			category: 'Assistêncioa pré-natal',
+			title: 'Simulado sobrecontagem dinâmica',
+			img: 'dist/img/05.png'
 		},
 		{
 			id: 2,

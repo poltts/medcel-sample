@@ -1,16 +1,59 @@
-<div class="row">
+<div class="container">
+    <div class="row">
         <section>
             <div class="col-xs-12">
-                <div class="videos">
-                    <div class="col-md-6">
-                        <h2>Sugestões para bater sua meta</h2>
-                        <div class="icon"></div>
+                <div class="videos-info">
+                    <div class="col-md-6 no-pad">
+                        <h2>
+                            Sugestões para bater sua meta
+                            <span class="icon question">
+                                <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            </span>
+                        </h2>
                     </div>
-                    <div class="col-md-6">
-                        <h2>Meta total do curso</h2>
-                        <div class="icon"></div>
+                    <div class="col-md-6 no-pad">
+                        <h2>
+                            Meta total do curso
+                            <span class="green"> {{ info.meta }} </span>
+                            <span class="icon gear">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                            </span>
+                        </h2>
                     </div>
                 </div>
-            </div>
+                <div class="videos-list">
+                    <ul>
+                        <li ng-repeat="data in info.data | limitTo: videosLimit">
+                            <small>{{ data.category }}</small>
+                            <span class="img-overlay"></span>
+                            <img ng-src="{{ data.img }}" alt="{{ data.type }} image" />
+                            <p>{{ data.title }}</p>
+                            <span class="infos video-info" ng-if="data.type == 'video'">
+                                <span class="icon left">
+                                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                </span>
+                                <span class="icon right">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                </span>
+                                <span class="icon txt">{{ data.time }}</span>
+                            </span> 
+                            <span class="infos simulado-info" ng-if="data.type == 'simulado'">
+                                <span class="icon">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                </span>
+                                <span class="icon txt">{{ data.questions }} questões</span>
+                            </span> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="more">
+                    <span ng-click="moreVideos()">{{ btnTxt }}</span>
+                    <span class="icon">
+                        <i class="fa fa-angle-{{btnIcon}}" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+            </div> 
         </section>
+</div>
 </div>

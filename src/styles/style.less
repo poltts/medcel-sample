@@ -164,7 +164,161 @@ header{
 }/* #end header */
 main{
     padding: 2% 0px;
-    margin: 2% auto;
+    margin: @header-h auto 0px auto;
+    
     .size(100%,auto);
     .a-center;
+
+    .videos{
+        position: absolute;
+        top: @header-h;
+        left: 0px;
+        background: #333;
+        margin: 0px;
+        padding: 2% 0px;
+        .size(100%,auto);
+
+        .videos-info{
+            h2{
+                font-family: @font-name-default;
+                text-align: left;
+                margin-bottom: 2%; 
+                .bold;
+                .color-white;
+            }
+            > [class*="col-"]:last-child{
+                h2{ text-align: right;}
+            }
+        }
+
+        .more{
+            margin: 0px auto;
+            text-align: center;
+            .color-white;
+
+            > span{
+                .pointer;
+            }
+        }
+
+        .icon{
+            display: inline-block;
+            .size(15px,15px);
+
+            > i{
+                font-size: 15px;
+                .color-white;
+            }
+
+            &.question{ 
+                > i{
+                    color: #666;
+                    font-size: 15px;
+                }
+            }
+
+            &.gear{ 
+                > i{ 
+                    font-size: 15px;
+                }
+            }
+        }
+
+        ul{
+            display: inline-block;
+            list-style-type: none;
+            text-align: center;
+
+            .size(100%,auto);
+            .clean;            
+
+            > li{
+                position: relative;
+                float: left;
+                list-style-type: none;
+                width: calc(100%/5);
+                height: 198px;
+                margin: 0 0 13px 0;
+                .pointer;
+
+                    > small{
+                        font-size: 100%;
+                        color: #c5c5c5;
+                        padding: 0px;
+                        float: left;
+
+                        .bold;
+                        .a-left;
+                        .size(100%, auto);
+                    }
+              
+                    > img{
+                        position: absolute;
+                        margin: 0px;
+                        top: 21px;
+                        left: 0px; 
+                        opacity: .75;
+                        .size(90%,auto);
+                        .border(1px,solid,#333);
+                        .box-shadow1;
+
+                    }
+
+                    > p{
+                        font-size: 133.66%;
+                        padding: 0px;
+                        margin: 0px 0 0 15px;
+                        top: 85px;
+                        float: left;
+                        position: relative;
+                        color: #c5c5c5;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        .a-left;
+                        .size(76%, auto);
+                        .color-white;
+                        .bold;
+                    }
+
+                    > .infos{
+                        display: inline-block;
+                        padding: 0px;
+                        position: relative;
+                        z-index: 6;
+                        margin: 98px 0 0 14px;
+                        .size(100%, auto);
+                        .a-left;
+
+                        > .icon{
+                            float: left;
+                            width: auto;
+                            height: auto;
+                            margin: 0 8px 0 0;
+
+                            > i{
+                                font-size: 15px;
+                                .color-white;
+                            }
+
+                            &.txt{
+                                display: inline-block; 
+                                font-size: 91.67%;
+                                margin: 3px 0 0 0;
+                                .color-white; 
+                            }
+
+                            &:last-child{
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+            }
+        }
+
+    }
 }
+.green{ color: #43a047;}
+.no-pad{ padding: 0px;}
+
+.left{ float: left; }
+.rigth{ float: right; }
